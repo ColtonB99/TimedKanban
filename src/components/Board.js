@@ -5,7 +5,7 @@ import Column from './Column';
 const Board = (props) => {
     return (
       <section className="flex w-full h-screen">
-        {props.data.map((data) => <Column Title={data.title} />)}
+        {props.data.map((column) => <Column Data={column} Title={column.title} />)}
       </section>
     )
   }

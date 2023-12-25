@@ -1,18 +1,13 @@
 import React from 'react'
+import Task from './Task';
 
 const Column = (props) => {
   return ( 
-    <div className="flex-1 p-4">{props.Title}
-    
-    <div>Task 1</div>
-    <div>Task 2</div>
-    <div>Task 3</div>
-    <div>Task 4</div>
-    
+    <div className="flex-1 p-4">
+      <div className='font-bold text-lg'>{props.Data.title}</div>
+      {props.Data.tasks.map((task) => <Task key={task.taskID} title={task.task}/> )}
     </div>
-    
-    
-    )
+  )
 }
 
 export default Column
